@@ -103,10 +103,8 @@ function valUser(campos) {
         .then(res => {
             if(res.id !== null) {
                 alert("Bienvenido "+res.name+" ! ! !");
-                ReactDOM.render(
-                    <React.StrictMode>
-                      <Profile idUser={res.id} />
-                    </React.StrictMode>,
+                ReactDOM.createPortal(                    
+                    <Profile idUser={res.id} />,
                     document.getElementById('mainCard')
                 );
             } else {

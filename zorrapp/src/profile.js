@@ -5,7 +5,7 @@ import Adm from "./adm";
 
 function Profile(props) {
     return(
-        <div className="card-body p-md-5 mx-md-4">
+        <div>
             <div className="card-header gradient-custom-2">
                 <div className="text-white px-3 py-4 p-md-5 mx-md-4">
                     <div className="text-center">

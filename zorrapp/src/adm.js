@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from 'react-dom';
 import Login from './login';
+import Users from './users';
 
 function Adm() {
     return(
@@ -17,9 +18,9 @@ function Adm() {
                 </li>
             </ul>
             <div className="tab-content" id="myTabContent">
-                <div className="tab-pane fade show active" id="users" role="tabpanel" aria-labelledby="home-tab">Hola usuarios.</div>
-                <div className="tab-pane fade" id="fragances" role="tabpanel" aria-labelledby="profile-tab">Hola productos.</div>
-                <div className="tab-pane fade" id="logout" role="tabpanel" aria-labelledby="contact-tab"> ¿Quieres salir?</div>
+                <div className="tab-pane fade show active" id="users" role="tabpanel" aria-labelledby="home-tab">{Users()}</div>
+                <div className="tab-pane fade" id="fragances" role="tabpanel" aria-labelledby="profile-tab"></div>
+                <div className="tab-pane fade" id="logout" role="tabpanel" aria-labelledby="contact-tab"></div>
             </div>
         </div>
     );
@@ -28,7 +29,10 @@ function Adm() {
 export default Adm;
 
 function pintarUsers() {
-
+    ReactDOM.render(
+        <Users />,
+        document.getElementById('users')
+    );
 }
 
 function pintarFragances() {
@@ -36,11 +40,8 @@ function pintarFragances() {
 }
 
 function pintarLogin() {
-    alert("Está pintando el login.")
     ReactDOM.render(
-        <React.StrictMode>
-          <Login />
-        </React.StrictMode>,
+        <Login />,
         document.getElementById('mainCard')
     );
 }

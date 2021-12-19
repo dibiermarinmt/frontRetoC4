@@ -107,7 +107,7 @@ function valUser(campos) {
                     <React.StrictMode>
                       <Profile idUser={res.id} />
                     </React.StrictMode>,
-                    document.getElementById('root')
+                    document.getElementById('mainCard')
                 );
             } else {
                 alert("El usuario no se encuentra en la base de datos.")
